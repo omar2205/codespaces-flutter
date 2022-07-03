@@ -14,7 +14,7 @@ ENV PATH="/home/codespace/flutter/bin:$PATH"
 
 USER codespace
 
-RUN mkdir /home/codespace/android && cd /home/codespace/android \
+RUN mkdir /home/codespace/.pub_cache && /home/codespace/android && cd /home/codespace/android \
   && wget https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O /home/codespace/android/commandlinetools.zip \
   && unzip commandlinetools.zip \
   && mv cmdline-tools tools \ 
