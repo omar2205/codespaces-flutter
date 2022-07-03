@@ -32,5 +32,4 @@ RUN echo "y" | sdkmanager 'platform-tools' 'platforms;android-30'
 RUN git clone https://github.com/flutter/flutter && \
   /home/codespace/flutter/bin/flutter config --enable-web
 
-RUN mkdir -p /workspaces/codespaces-flutter
 COPY .bashrc /home/codespace/.bashrc
