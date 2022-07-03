@@ -12,6 +12,8 @@ WORKDIR /home/codespace
 ENV PUB_CACHE=/home/codespace/.pub_cache
 ENV PATH="/home/codespace/flutter/bin:$PATH"
 
+USER codespace
+
 RUN mkdir /home/codespace/android && cd /home/codespace/android \
   && wget https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O /home/codespace/android/commandlinetools.zip \
   && unzip commandlinetools.zip \
@@ -32,4 +34,3 @@ RUN git clone https://github.com/flutter/flutter && \
 
 RUN mkdir -p /workspaces/codespaces-flutter
 COPY .bashrc /home/codespace/.bashrc
-USER codespace
